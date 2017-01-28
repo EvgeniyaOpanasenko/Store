@@ -10,7 +10,7 @@ public class ValidationUtils {
 
     public static void validateProductId(int id) throws InvalidProductIdException {
 
-        if (id >= 0 ) {
+        if (id <= 0 ) {
             throw new InvalidProductIdException("Invalid product id");
         }
     }
@@ -18,7 +18,7 @@ public class ValidationUtils {
 
     public static void validatePrice(int price) throws InvalidPriceException {
 
-        if ( price > 0) {
+        if ( price < 0) {
             throw new InvalidPriceException("Invalid product id");
         }
     }

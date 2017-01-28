@@ -8,12 +8,11 @@ import java.util.List;
  * Created by Lisa on 1/21/2017.
  */
 public interface IProductDao {
-    public boolean addProduct(Product product);
 
-    public boolean removeProduct(Product product);
+    boolean saveProduct(Product product);
 
-    // must return only one Product
-    //public Product getProduct (Product product);
-    public List<Product> getAllProduct();
+    boolean removeProduct(Product product);
+
+    List<Product> getAllProduct();
 
 }

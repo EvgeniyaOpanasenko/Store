@@ -18,7 +18,7 @@ public class FileSaver {
     private String path;
     private Gson gson = new Gson();
 
-    public FileSaver(String path, Gson gson) {
+    public FileSaver(String path) {
         this.path = path;
         this.gson = new GsonBuilder().setPrettyPrinting().create();
     }
