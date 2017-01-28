@@ -1,8 +1,0 @@
-[
-  {
-    "type": "CELL_PHONE",
-    "name": "iPhone",
-    "price": 1234,
-    "idProduct": 1235
-  }
-]
