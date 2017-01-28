@@ -16,7 +16,7 @@ public class TopLevelController {
 
     public TopLevelController(IProductDao dao) {
 
-        List<Product> products = new ArrayList<Product>(dao.getAllProduct());
+        List<Product> products = new ArrayList<>(dao.getAllProduct());
         this.startFrame = new TopLevelFrame(products);
 
         startFrame.getSortProductButton().addActionListener(e -> {

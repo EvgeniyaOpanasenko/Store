@@ -29,7 +29,7 @@ public class FileSaver {
             List<Product> products = gson.fromJson(br, new TypeToken<List<Product>>() {
             }.getType());
             if (products == null) {
-                products = new ArrayList();
+                products = new ArrayList<>();
             }
             return products;
         } catch (FileNotFoundException e) {
@@ -40,8 +40,8 @@ public class FileSaver {
 
     public void save(List <Product> products) {
         String json = gson.toJson(products);
-        try {
-            FileWriter fr = new FileWriter(path);
+        try (FileWriter fr = new FileWriter(path)){
+//            Todo make flush or use try with resources (already done)
             fr.write(json);
         } catch (IOException e) {
             e.printStackTrace();

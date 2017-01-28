@@ -54,7 +54,7 @@ public class Product {
 
         if (price != product.price) return false;
         if (idProduct != product.idProduct) return false;
-        if (type != product.type) return false;
+        if (!type.equals(product.type)) return false;
         return name.equals(product.name);
     }
 
